@@ -1,3 +1,7 @@
+
+<img width="1919" height="912" alt="image" src="https://github.com/user-attachments/assets/8a5b463f-a73d-4596-8c90-737b699f1afa" />
+
+
 🍔 Food Vision – Food Image Classification using EfficientNetB0
 
 Food Vision is an end-to-end deep learning computer vision project that classifies food images into 101 different categories using EfficientNetB0 with transfer learning.
