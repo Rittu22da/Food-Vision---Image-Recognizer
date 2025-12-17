@@ -1,0 +1,60 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Vision | Result</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<div class="result-card">
+    <h1>🍴 Prediction Result</h1>
+
+    <img src="{{ image_path }}" alt="Uploaded Food Image" class="result-img">
+
+    <h2 class="food-name">{{ prediction }}</h2>
+    <p class="confidence">Confidence: {{ confidence }}%</p>
+
+    <a href="/" class="back-btn">🔁 Try Another Image</a>
+</div>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Vision | Result</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+
+<div class="bg-overlay"></div>
+
+<div class="glass-card result-card">
+
+    <!-- LEFT SECTION (IMAGE) -->
+    <div class="result-left">
+        <div class="result-image-frame">
+            <img src="{{ image_path }}" alt="Uploaded Food Image">
+        </div>
+    </div>
+
+    <!-- RIGHT SECTION (TEXT) -->
+    <div class="result-right">
+        <h1>🍴 Prediction Result</h1>
+
+        <h2 class="food-name">{{ prediction }}</h2>
+        <p class="confidence">Confidence: {{ confidence }}%</p>
+
+        <a href="/" class="predict-btn result-btn">
+            🔁 Try Another Image
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

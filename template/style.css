@@ -1,0 +1,269 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* THEME COLORS */
+:root {
+    --gold: #EAC23F;
+    --dark: #1F1C19;
+    --red: #E85C3A;
+    --glass-bg: rgba(31, 28, 25, 0.55);
+    --glass-border: rgba(234, 194, 63, 0.35);
+}
+
+/* BODY BACKGROUND */
+body {
+    height: 100vh;
+    background: 
+        linear-gradient(
+            135deg,
+            rgba(31, 28, 25, 0.3),
+            rgba(31, 28, 25, 0.2)
+        ),
+        url("https://images.unsplash.com/photo-1504674900247-0877df9cc836");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* OVERLAY */
+.bg-overlay {
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(6px);
+}
+
+/* GLASS CARD */
+.glass-card {
+    position: relative;
+    width: 80%;
+    max-width: 1100px;
+    height: 520px;
+    display: flex;
+    background: var(--glass-bg);
+    border-radius: 24px;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    overflow: hidden;
+}
+
+/* LEFT SECTION */
+.left-section {
+    width: 45%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    width: 240px;
+    margin-bottom: 20px;
+}
+
+.left-section h1 {
+    color: var(--gold);
+    font-size: 2.4rem;
+    margin-bottom: 14px;
+}
+
+.description {
+    color: #EAEAEA;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.tech-stack {
+    color: var(--gold);
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* RIGHT SECTION */
+.right-section {
+    width: 55%;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* UPLOAD FRAME */
+.upload-frame {
+    width: 100%;
+    height: 260px;
+    border: 2px dashed var(--gold);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 30px;
+}
+
+.upload-frame:hover {
+    background: rgba(234, 194, 63, 0.08);
+}
+
+.upload-frame span {
+    color: var(--gold);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.upload-frame input {
+    display: none;
+}
+
+/* BUTTON */
+.predict-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(
+        135deg,
+        var(--gold),
+        var(--red)
+    );
+    color: var(--dark);
+    transition: 0.3s;
+}
+
+.predict-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(234, 194, 63, 0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .glass-card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+    }
+
+    .left-section {
+        text-align: center;
+        align-items: center;
+    }
+}
+
+
+/* =========================
+   RESULT PAGE STYLES
+   (MATCHING INDEX PAGE)
+========================= */
+
+.result-card {
+    padding: 50px;
+}
+
+/* LEFT IMAGE SECTION */
+.result-left {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* IMAGE FRAME */
+.result-image-frame {
+    width: 280px;
+    height: 280px;
+    border: 2px dashed var(--gold);
+    border-radius: 20px;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* RIGHT TEXT SECTION */
+.result-right {
+    width: 55%;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.result-right h1 {
+    color: var(--gold);
+    font-size: 2.4rem;
+    margin-bottom: 18px;
+}
+
+.food-name {
+    color: var(--gold);
+    font-size: 1.9rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.confidence {
+    color: #EAEAEA;
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+}
+
+/* BUTTON ALIGNMENT */
+.result-btn {
+    width: fit-content;
+    padding: 14px 36px;
+    text-decoration: none
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .result-card {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 30px;
+    }
+
+    .result-left,
+    .result-right {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        align-items: center;
+    }
+
+    .result-right {
+        margin-top: 30px;
+    }
+
+    .result-btn {
+        margin: auto;
+    }
+}
+
+
