@@ -37,37 +37,6 @@ NumPy, Matplotlib
 
 TensorBoard
 
-📂 Project Directory Structure
-FOOD-VISION/
-│
-├── model/
-│   └── food_vision_model.h5        # Trained final model
-│
-├── model_checkpoints/
-│   └── cp.weights.h5               # Best saved model weights
-│
-├── static/
-│   ├── css/
-│   │   └── style.css               # Frontend styling
-│   └── uploads/                    # Uploaded images
-│
-├── templates/
-│   ├── index.html                  # Image upload page
-│   └── result.html                 # Prediction result page
-│
-├── training_logs/
-│   └── efficientnetb0_101_classes/ # TensorBoard logs
-│       ├── train/
-│       └── validation/
-│
-├── random testing images/           # Sample images for testing
-│
-├── app.py                           # Flask application
-├── helper_functions.py              # Utility functions (TensorBoard, etc.)
-├── vision.ipynb                     # Model training notebook
-│
-├── tfenv / myenv / senv              # Virtual environments (ignored in GitHub)
-└── README.md
 
 📊 Dataset Information
 
