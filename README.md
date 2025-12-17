@@ -63,6 +63,7 @@ Global Average Pooling
 Dense Layer (101 units)
 
 Softmax activation for multi-class classification
+<img width="665" height="770" alt="image" src="https://github.com/user-attachments/assets/78108d14-471f-4a7f-8585-e9a9396c4050" />
 
 ⚙️ Training Strategy
 Phase 1 – Feature Extraction
